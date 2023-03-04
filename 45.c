@@ -10,13 +10,8 @@ int main()
 
     int hcf = 1;
     for (int i = 2; i <= x && i <= y; i++)
-    {
         if (x % i == 0 && y % i == 0)
-        {
             hcf = i;
-            break;
-        }
-    }
 
     printf("HCF of %d and %d = %d\n", x, y, hcf);
 
