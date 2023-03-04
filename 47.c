@@ -17,6 +17,7 @@ int main()
         case 7 : printf("Sunday"); break;
         default : printf("Please enter number between 1 to 7 ! ");
     }
-    printf("\n")
+    printf("\n");
+    
     return 0;
 }
