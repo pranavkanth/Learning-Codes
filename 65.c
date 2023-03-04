@@ -1,18 +1,36 @@
-#include<stdio.h>
-float add(int x, float y);
+#include <stdio.h>
+#include <math.h>
+
+void calculate(int *arr, int length, int *sum, float *per);
+
 int main()
 {
-    int a;
-    float b;
-    printf("Enter 1st number: ");
-    scanf("%d", &a);
-    printf("Enter 2nd number: ");
-    scanf("%f", &b);
-    printf("%d + %f = %f", a, b, add(a, b));
+    int length;
+    printf("Enter number of subjects: ");
+    scanf("%d", &length);
+
+    int nums[length];
+    for (int i = 0; i < length; i++)
+    {
+        printf("Enter marks in subject %d: ", i + 1);
+        scanf("%d", &nums[i]);
+    }
+
+    int sum;
+    float per;
+    calculate(nums, length, &sum, &per);
+
+    printf("Sum = %d\n", sum);
+    printf("Percentage = %f\n", per);
+
     return 0;
 }
-float add(int x, float y)
+
+void calculate(int *arr, int length, int *sum, float *per)
 {
-    float m = x + y;
-    return m;
+    *sum = 0;
+    for (int i = 0; i < length; i++)
+        *sum += arr[i];
+
+    *per = (float) *sum / (100 * length) * 100;
 }
