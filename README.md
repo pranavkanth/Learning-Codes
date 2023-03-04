@@ -141,15 +141,14 @@
     - If watts = 40 or 60: lifespan = 1000
     - If watts = 75: lifespan = 700
     - Otherwise: lifespan = 0
-1. To find if the entered character is a digit or not.
+1. If the lengths of the sides of a triangle are denoted by a, b, and c, then the area of the represented triangle = `√(S(S-a)(S-b)(S-c))`, where `S=(a+b+c)/2`. Write a program to calculate the area of a triangle.
 1. Make a menu-driven program with the following functions:
     1. Check if the number is prime or not
     2. Check if the number is Armstrong or not
     3. Find the factorial of the number
     4. Exit
-1. Write a menu-driven program for a calculator (+, -,*, /).
-1. Write a menu-driven program to compute the areas of the various geometrical shapes.
 1. Write a menu-driven program to perform a simple calculation on two numbers (addition, subtraction, multiplication, division).
+1. Write a menu-driven program to compute the areas of the various geometrical shapes.
 1. Write the program using switch-case to simulate traffic lights: R = STOP!, Y = CAUTION!, G = GO!
 1. Write a program to calculate X to the power Y using the inbuilt power function.
 1. Determine sin(x), cos(x) and tan(x) values for x=0, x=30, x=60, x=90. The output should be displayed as follows:
@@ -165,10 +164,6 @@
 1. Write a program to find the sum of the squares of the first n numbers and calculate its sum.
 1. Write a program to calculate `1/1! + 2/2! + 3/3! + 4/4! + ... + n/n!`
 1. Write a function that receives a `float` and an `int` from `main()`, finds the product of these two, and returns the product which is printed through `main()`. (Hint: Function with arguments and with return type.)
-1. Write a function that receives 5 integers and returns the sum, the average, and the standard deviation of these numbers. Call this function from `main()` and print the results in `main()`. (Hint: Function with arguments and with return type.)
-1. Write a function that receives marks received by a student in 3 subjects and returns the average and percentage of these marks. Call this function from `main()` and print the results in `main()`. (Hint: Function with arguments and with return type.)
-1. Write a recursive function to obtain the first 25 numbers of a Fibonacci sequence. In a Fibonacci sequence, the sum of two successive terms gives the third term. Following are the first few terms of the Fibonacci sequence: 1 1 2 3 5 8 13 21 34 55 89... (Hint: Function with no arguments and no return type.)
-1. If the lengths of the sides of a triangle are denoted by a, b, and c, then the area of the represented triangle = `√(S(S-a)(S-b)(S-c))`, where `S=(a+b+c)/2`. Write a program to calculate the area of a triangle.
 1. Write a function that receives 5 integers and returns the sum, the average, and the standard deviation of these numbers. Call this function from `main()` and print the results in `main()`.  
     `σ = √Σ(x - μ))` whole to the power 2 / N  
     where 
@@ -176,3 +171,5 @@
     - N = the size of the population
     - X = each value from the population
     - μ = the population mean
+1. Write a function that receives marks received by a student in 3 subjects and returns the average and percentage of these marks. Call this function from `main()` and print the results in `main()`. (Hint: Function with arguments and with return type.)
+1. Write a recursive function to obtain the first 25 numbers of a Fibonacci sequence. In a Fibonacci sequence, the sum of two successive terms gives the third term. Following are the first few terms of the Fibonacci sequence: `1 1 2 3 5 8 13 21 34 55 89...` (Hint: Function with no arguments and no return type.)
