@@ -117,7 +117,6 @@
     * * * * *
     ```
 1. Program to print all Armstrong numbers between 1 to 1000.
-1. Write a program to add the first seven terms of the following series using a for loop: `1/1! + 2/2! + 3/3! + 4/4! + ... + n/n!`
 1. Find the factorial value of any number.
 1. Write a program to generate the series 
     ```

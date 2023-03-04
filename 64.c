@@ -1,43 +1,26 @@
-#include<stdio.h>
-#include<math.h>
+// Write a recursive function to obtain the first 25 numbers of a Fibonacci
+// sequence. In a Fibonacci sequence the sum of two successive terms gives
+// the third term. Following are the first few terms of the Fibonacci
+// sequence: 1 1 2 3 5 8 13 21 34 55 89... [Hint: Function with no arguments
+// and no return type].
 
-void calculate(int *arr, int length, int *sum, float *avg, float *stdev);
+#include<stdio.h>
+void fibonacci(int p, int c, int count);
 
 int main()
 {
-    int length;
-    printf("Enter number of numbers: ");
-    scanf("%d", &length);
+    int limit;
+    printf("Enter limit: ");
+    scanf("%d", &limit);
 
-    int nums[length];
-    for (int i = 0; i < length; i++)
-    {
-        printf("Enter number %d: ", i + 1);
-        scanf("%d", &nums[i]);
-    }
-
-    int sum;
-    float avg, stdev;
-    calculate(nums, length, &sum, &avg, &stdev);
-
-    printf("Sum = %d\n", sum);
-    printf("Average = %f\n", avg);
-    printf("Standard deviation = %f\n", stdev);
-
+    fibonacci(0, 1, limit);
+    printf("\n");
+    
     return 0;
 }
 
-void calculate(int* arr, int length, int* sum, float* avg, float* stdev)
+void fibonacci(int p, int c, int count)
 {
-    *sum = 0;
-    for (int i = 0; i < length; i++)
-        *sum += arr[i];
-
-    *avg = (float) *sum / length;
-
-    int sigma = 0;
-    for (int i = 0; i < length; i++)
-        sigma += pow(arr[i] - *avg, 2);
-
-    *stdev = sqrt(sigma / (length - 1));
+    printf("%d ", p + c);
+    if (count) fibonacci(c, p + c, --count);
 }
