@@ -20,7 +20,7 @@ int main()
 
     gs = bs + da + hra;
 
-    printf("◆ Gross salary (₹%f + %f%% DA + %f%% HRA) = ₹%.2f", bs, da, hra, gs);
+    printf("◆ Gross salary (₹%.2f + %.2f DA + %.2f HRA) = ₹%.2f\n", bs, da, hra, gs);
 
     return 0;
 }
