@@ -1,25 +1,19 @@
 #include<stdio.h>
 
-long factorial(int n);
+long factorial(int x);
 
 int main()
 {
     int n;
     printf("Enter a number: ");
     scanf("%d", &n);
-    
-    float sum = 0;
-    for (int i = 1; i <= n; i++)
-        sum += (float) i / factorial(i);
-    printf("Sum = %f\n", sum);
-    
+    printf("Factorial of %d = %ld\n", n, factorial(n));
     return 0;
 }
-
-long factorial(int n)
+long factorial(int x)
 {
-    long fact = 1;
-    for (int i = 1; i <= n; i++)
-        fact *= i;
-    return fact;
+    long m = 1;
+    for(int i = 1; i <= x; i++)
+        m *= i;
+    return m;
 }
