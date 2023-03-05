@@ -2,16 +2,26 @@
 
 int main()
 {
-    int basicSalary,
-        da = 40,
-        hra = 20;
-    float grossSalary;
+    int bs, da, hra;
+    float gs;
 
     printf("◇ Input basic salary (₹): ");
-    scanf("%d", &basicSalary);
+    scanf("%d", &bs);
 
-    grossSalary = basicSalary + (da * basicSalary / 100) + (hra * basicSalary / 100);
+    if (bs < 1500) 
+    {
+        da = 0.9 * bs;
+        hra = 0.1 * bs;
+    }
+    else
+    {
+        da = 0.98 * bs;
+        hra = 500;
+    }
 
-    printf("◆ Gross salary (₹%d + %d%% DA + %d%% HRA) = ₹%.2f", basicSalary, da, hra, grossSalary);
+    gs = bs + da + hra;
+
+    printf("◆ Gross salary (₹%d + %d%% DA + %d%% HRA) = ₹%.2f", bs, da, hra, gs);
+
     return 0;
 }
