@@ -5,7 +5,7 @@ int main()
     float bs, da, hra, gs;
 
     printf("◇ Input basic salary (₹): ");
-    scanf("%d", &bs);
+    scanf("%f", &bs);
 
     if (bs < 1500) 
     {
@@ -20,7 +20,7 @@ int main()
 
     gs = bs + da + hra;
 
-    printf("◆ Gross salary (₹%d + %d%% DA + %d%% HRA) = ₹%.2f", bs, da, hra, gs);
+    printf("◆ Gross salary (₹%f + %f%% DA + %f%% HRA) = ₹%.2f", bs, da, hra, gs);
 
     return 0;
 }
