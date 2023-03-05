@@ -1,17 +1,14 @@
 #include<stdio.h>
 
-int checkPrime(int);
+int checkPrime(int num);
 
 int main()
 {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-
-    if (checkPrime(num) == 0)
-        printf("%d is prime!\n", num);
-    else
-        printf("%d is not prime\n", num);
+    printf("List of prime numbers between 1 and 1000:\n");
+    for (int num = 1; num <= 1000; num++)
+        if (checkPrime(num) == 0)
+            printf("%d ", num);
+    printf("\n");
 
     return 0;
 }

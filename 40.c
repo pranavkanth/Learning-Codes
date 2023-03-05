@@ -1,21 +1,28 @@
 #include<stdio.h>
 
-long factorial(int x);
-
 int main()
 {
-    int n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    printf("Factorial of %d = %ld\n", n, factorial(n));
-    return 0;
-}
-long factorial(int x)
-{
-    long m = 1;
-    for(int i = 1; i <= x; i++)
+    int size = 7;
+    printf("Enter size: ");
+    scanf("%d", &size);
+
+    for (int i = size; i; i--)
     {
-        m *= i;
+        for (int j = 0; j < i; j++)
+            printf("%c ", 'A' + j);
+
+        for (int j = 0; j < size * 4 - 2 - i * 4; j++)
+            printf(" ");
+
+        if (i == size)
+            for (int j = i - 2; j >= 0; j--)
+                printf("%c ", 'A' + j);
+        else
+            for (int j = i - 1; j >= 0; j--)
+                printf("%c ", 'A' + j);
+
+        printf("\n");
     }
-    return m;
+
+    return 0;
 }

@@ -1,28 +1,28 @@
 #include<stdio.h>
 
+int checkPrime(int);
+
 int main()
 {
-    int size = 7;
-    printf("Enter size: ");
-    scanf("%d", &size);
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
 
-    for (int i = size; i; i--)
-    {
-        for (int j = 0; j < i; j++)
-            printf("%c ", 'A' + j);
-
-        for (int j = 0; j < size * 4 - 2 - i * 4; j++)
-            printf(" ");
-
-        if (i == size)
-            for (int j = i - 2; j >= 0; j--)
-                printf("%c ", 'A' + j);
-        else
-            for (int j = i - 1; j >= 0; j--)
-                printf("%c ", 'A' + j);
-
-        printf("\n");
-    }
+    if (checkPrime(num) == 0)
+        printf("%d is prime!\n", num);
+    else
+        printf("%d is not prime\n", num);
 
     return 0;
+}
+
+int checkPrime(int num)
+{
+    for (int i = 2; i <= num / 2; i++)
+    {
+        if (i == num / 2)
+            return 0;
+        if (num % i == 0)
+            return -1;
+    }
 }
