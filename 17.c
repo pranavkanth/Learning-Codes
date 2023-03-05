@@ -2,8 +2,7 @@
 
 int main()
 {
-    int bs, da, hra;
-    float gs;
+    float bs, da, hra, gs;
 
     printf("◇ Input basic salary (₹): ");
     scanf("%d", &bs);
