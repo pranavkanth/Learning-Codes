@@ -3,7 +3,7 @@
 int main()
 {
     int op = 0;
-    do
+    while (1)
     {
         printf("Choose functionality:\n");
         printf("\t1) Addition\n");
@@ -13,49 +13,42 @@ int main()
         printf("\t5) Exit\n");
         scanf("%d", &op);
 
-        float num1, num2;
-        switch (op)
+        if (op == 5)
         {
-        case 1:
-            printf("Enter number 1: ");
-            scanf("%f", &num1);
-            printf("Enter number 2: ");
-            scanf("%f", &num2);
-
-            printf("%.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
-            break;
-        case 2:
-            printf("Enter number 1: ");
-            scanf("%f", &num1);
-            printf("Enter number 2: ");
-            scanf("%f", &num2);
-
-            printf("%.2f - %.2f = %.2f\n", num1, num2, num1 - num2);
-            break;
-        case 3:
-            printf("Enter number 1: ");
-            scanf("%f", &num1);
-            printf("Enter number 2: ");
-            scanf("%f", &num2);
-
-            printf("%.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
-            break;
-        case 4:
-            printf("Enter number 1: ");
-            scanf("%f", &num1);
-            printf("Enter number 2: ");
-            scanf("%f", &num2);
-
-            printf("%.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
-            break;
-        case 5:
             printf("Goodbye!\n");
             break;
-        default:
+        }
+        if (!(op >= 1 && op <= 5))
+        {
             printf("Invalid operation!\n");
             break;
         }
-    } while (!(op >= 1 && op <= 5));
+
+        float num1, num2;
+        printf("Enter number 1: ");
+        scanf("%f", &num1);
+        printf("Enter number 2: ");
+        scanf("%f", &num2);
+
+        switch (op)
+        {
+        case 1:
+            printf("%.2f + %.2f = %.2f\n", num1, num2, num1 + num2);
+            break;
+        case 2:
+            printf("%.2f - %.2f = %.2f\n", num1, num2, num1 - num2);
+            break;        {
+            printf("Goodbye!\n");
+            break;
+        }
+        case 3:
+            printf("%.2f * %.2f = %.2f\n", num1, num2, num1 * num2);
+            break;
+        case 4:
+            printf("%.2f / %.2f = %.2f\n", num1, num2, num1 / num2);
+            break;
+        }
+    };
 
     return 0;
 }
