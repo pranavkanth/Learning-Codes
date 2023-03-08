@@ -8,7 +8,7 @@ long factorial(int);
 int main()
 {
     int op = 0;
-    do
+    while (1)
     {
         printf("Choose functionality:\n");
         printf("\t1) Check if a number is prime\n");
@@ -17,38 +17,40 @@ int main()
         printf("\t4) Exit\n");
         scanf("%d", &op);
 
+        if (op == 4)
+        {
+            printf("Goodbye!\n");
+            break;
+        }
+        {
+        if (!(op >= 1 && op <= 4))
+        {
+            printf("Invalid operation!\n");
+            continue;
+        }
+
         int num;
+        printf("Enter number: ");
+        scanf("%d", &num);
         switch (op)
         {
         case 1:
-            printf("Enter number: ");
-            scanf("%d", &num);
             if (checkPrime(num) == 0)
                 printf("%d is prime!\n", num);
             else
                 printf("%d is NOT prime.\n", num);
             break;
         case 2:
-            printf("Enter number: ");
-            scanf("%d", &num);
             if (checkArmstrong(num) == 0)
                 printf("%d is an Armstrong number!\n", num);
             else
                 printf("%d is NOT an Armstrong number.\n", num);
             break;
         case 3:
-            printf("Enter number: ");
-            scanf("%d", &num);
             printf("Factorial of %d = %ld\n", num, factorial(num));
             break;
-        case 4:
-            printf("Goodbye!\n");
-            break;
-        default:
-            printf("Invalid operation!\n");
-            break;
         }
-    } while (!(op >= 1 && op <= 4));
+    };
 
     return 0;
 }
